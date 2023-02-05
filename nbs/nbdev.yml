@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "cjm-pandas-utils"
+  site-url: "https://cj-mills.github.io/cjm-pandas-utils"
+  description: "Some utility functions for working with Pandas."
+  repo-branch: main
+  repo-url: "https://github.com/cj-mills/cjm-pandas-utils"
