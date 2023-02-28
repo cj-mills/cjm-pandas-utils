@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nmarkdown_to_pandas\n\n markdown_to_pandas (md_table_str:str)\n\nConvert a markdown table string to a pandas DataFrame.\n\n\n\n\nType\nDetails\n\n\n\n\nmd_table_str\nstr\nThe markdown table string to be converted.\n\n\n\n\nmd_table_str = \"\"\"\n| Name | Age | Occupation |\n| ---- | --- | ---------- |\n| John | 35  | Engineer    |\n| Jane | 29  | Teacher     |\n| Bob  | 42  | Doctor      |\n\"\"\"\n\n\nmarkdown_df = markdown_to_pandas(md_table_str)\nmarkdown_df[markdown_df.Name == \"Jane\"]\n\n\n\n\n\n  \n    \n      \n      Name\n      Age\n      Occupation\n    \n  \n  \n    \n      1\n      Jane\n      29\n      Teacher\n    \n  \n\n\n\n\n\nsource\n\n\ndisplay_df\n\n display_df (df:pandas.core.frame.DataFrame, align:str='left')\n\nDisplay a pandas DataFrame with specified alignment for the headers and all the cells.\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\ndf\nDataFrame\n\nThe DataFrame to be displayed.\n\n\nalign\nstr\nleft\nAlignment for the headers and all the cells.\n\n\n\n\nstyle_obj = display_df(markdown_df)\nstyle_obj\n\n\n\n\n  \n    \n       \n      Name\n      Age\n      Occupation\n    \n  \n  \n    \n      0\n      John\n      35\n      Engineer\n    \n    \n      1\n      Jane\n      29\n      Teacher\n    \n    \n      2\n      Bob\n      42\n      Doctor\n    \n  \n\n\n\n\nstyle_obj.data\n\n\n\n\n\n  \n    \n      \n      Name\n      Age\n      Occupation\n    \n  \n  \n    \n      0\n      John\n      35\n      Engineer\n    \n    \n      1\n      Jane\n      29\n      Teacher\n    \n    \n      2\n      Bob\n      42\n      Doctor"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "cjm-pandas-utils",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "cjm-pandas-utils",
+    "section": "Install",
+    "text": "Install\npip install cjm_pandas_utils"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "cjm-pandas-utils",
+    "section": "How to use",
+    "text": "How to use\n\nmarkdown_to_pandas\n\nfrom cjm_pandas_utils.core import markdown_to_pandas\n\n\nmd_table_str = \"\"\"\n| Name | Age | Occupation |\n| ---- | --- | ---------- |\n| John | 35  | Engineer    |\n| Jane | 29  | Teacher     |\n| Bob  | 42  | Doctor      |\n\"\"\"\n\n\nmarkdown_df = markdown_to_pandas(md_table_str)\nmarkdown_df.iloc[1]\n\nName             Jane\nAge                29\nOccupation    Teacher\nName: 1, dtype: object"
+  }
+]
