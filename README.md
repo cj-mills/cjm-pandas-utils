@@ -39,9 +39,3 @@ markdown_df.iloc[1]
     Age                29
     Occupation    Teacher
     Name: 1, dtype: object
-
-``` python
-"asdf"
-```
-
-    'asdf'
