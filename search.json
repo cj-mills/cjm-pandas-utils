@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "cjm-pandas-utils",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "cjm-pandas-utils",
+    "section": "Install",
+    "text": "Install\npip install cjm_pandas_utils"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "cjm-pandas-utils",
+    "section": "How to use",
+    "text": "How to use\n\nmarkdown_to_pandas\n\nfrom cjm_pandas_utils.core import markdown_to_pandas\n\n\nmd_table_str = \"\"\"\n| Name | Age | Occupation |\n| ---- | --- | ---------- |\n| John | 35  | Engineer    |\n| Jane | 29  | Teacher     |\n| Bob  | 42  | Doctor      |\n\"\"\"\n\n\nmarkdown_df = markdown_to_pandas(md_table_str)\nmarkdown_df.iloc[1]\n\nName             Jane\nAge                29\nOccupation    Teacher\nName: 1, dtype: object"
+  },
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nmarkdown_to_pandas\n\n markdown_to_pandas (md_table_str:str)\n\nConvert a markdown table string to a pandas DataFrame.\n\n\n\n\nType\nDetails\n\n\n\n\nmd_table_str\nstr\nThe markdown table string to be converted.\n\n\n\n\nmd_table_str = \"\"\"\n| Name | Age | Occupation |\n| ---- | --- | ---------- |\n| John | 35  | Engineer    |\n| Jane | 29  | Teacher     |\n| Bob  | 42  | Doctor      |\n\"\"\"\n\n\nmarkdown_df = markdown_to_pandas(md_table_str)\nmarkdown_df[markdown_df.Name == \"Jane\"]\n\n\n\n\n\n\n\n\nName\nAge\nOccupation\n\n\n\n\n1\nJane\n29\nTeacher\n\n\n\n\n\n\n\n\nsource\n\n\ndisplay_df\n\n display_df (df:pandas.core.frame.DataFrame, align:str='left')\n\nDisplay a pandas DataFrame with specified alignment for the headers and all the cells.\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\ndf\nDataFrame\n\nThe DataFrame to be displayed.\n\n\nalign\nstr\nleft\nAlignment for the headers and all the cells.\n\n\n\n\nstyle_obj = display_df(markdown_df)\nstyle_obj\n\n\n\n\n\n\n \nName\nAge\nOccupation\n\n\n\n\n0\nJohn\n35\nEngineer\n\n\n1\nJane\n29\nTeacher\n\n\n2\nBob\n42\nDoctor\n\n\n\n\n\n\nstyle_obj.data\n\n\n\n\n\n\n\n\nName\nAge\nOccupation\n\n\n\n\n0\nJohn\n35\nEngineer\n\n\n1\nJane\n29\nTeacher\n\n\n2\nBob\n42\nDoctor\n\n\n\n\n\n\n\n\nsource\n\n\nconvert_to_numeric\n\n convert_to_numeric (val)\n\n\nnumeric_val = convert_to_numeric(\"20 M\")\nnumeric_val\n\n20000000.0\n\n\n\nsource\n\n\nconvert_to_string\n\n convert_to_string (val)\n\n\nstring_val = convert_to_string(numeric_val)\nstring_val\n\n'20.0 M'"
+  }
+]
